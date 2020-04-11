@@ -15,7 +15,6 @@ def get_video_src(vid):
     p = re.compile(r'({.*})', re.S)
     jsonstr = re.findall(p, html)[0]
     json_data = json.loads(jsonstr)
-    # print(jsonstr)
 
     # 解析json数据获取url
     baseurl = json_data['vl']['vi'][0]['ul']['ui'][0]['url']
